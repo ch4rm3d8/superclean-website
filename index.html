@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Superclean Sydney</title>
+<meta name="description" content="Superclean Sydney Pty Ltd: construction cleaning and commercial cleaning across Sydney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: minimal, generous white space; two service pillars mirror the brand card (Construction | Commercial). Single light look in the Superclean palette. */
+:root{
+  --paper:#FDF5F3;     /* blush (brand card) */
+  --paper-2:#F8E9E6;
+  --line:#E6CFCB;
+  --rose:#D49A9C;      /* logo pink */
+  --rose-dk:#A9676C;
+  --ink:#231F20;       /* wordmark charcoal */
+  --ink-2:#5E5355;
+  --f-display:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:16px;
+  --max:1120px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose-dk);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.15;font-weight:700}
+h3{font-size:1.05rem;font-weight:600;line-height:1.3}
+p{margin:0}
+.label{display:block;font-family:var(--f-display);font-weight:600;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-dk);margin-bottom:14px}
+.lede{font-size:1.08rem;color:var(--ink-2);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-display);font-weight:600;font-size:.9rem;padding:.95em 1.6em;border:1px solid var(--ink);border-radius:999px;text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--rose-dk);border-color:var(--rose-dk)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+section{padding-block:clamp(64px,9vw,112px)}
+.sec-head{max-width:640px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head .lede{margin-top:16px}
+.tint{background:var(--paper-2)}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(253,245,243,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:38px;height:28px;color:var(--rose);flex:none}
+.brand b{display:block;font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;line-height:1}
+.brand small{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:500;font-size:.58rem;letter-spacing:.42em;text-transform:uppercase;color:var(--ink-2);margin-top:5px}
+.brand small::before,.brand small::after{content:"";height:1px;width:14px;background:var(--ink)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:.93rem;color:var(--ink-2)}
+.nav ul a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{font-family:var(--f-display);font-weight:500;font-size:.85rem;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:.7em 1.2em;font-size:.82rem}
+@media (max-width:940px){.nav ul{display:none}}
+@media (max-width:620px){.nav-phone{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(56px,8vw,104px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.7rem);line-height:1.08;font-weight:700}
+.hero h1 span{color:var(--rose-dk)}
+.hero .lede{margin-top:22px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stat{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
+.stat b{font-family:var(--f-display);font-size:2.4rem;line-height:1;font-weight:700;color:var(--rose-dk);font-variant-numeric:tabular-nums}
+.stat span{color:var(--ink-2)}
+.hero-photo{margin:0;min-width:0}
+.hero-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:62% 50%;border-radius:200px 200px var(--r) var(--r)}
+.hero-photo figcaption,.feature figcaption{margin-top:10px;font-size:.78rem;color:var(--ink-2)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-photo img{aspect-ratio:3/2;border-radius:var(--r)}}
+
+/* featured project */
+.feature{margin:0 0 40px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
+.feature img{display:block;width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.feature .main{grid-row:span 2;aspect-ratio:3/2}
+.feature .thumb{aspect-ratio:3/2}
+.feature-info{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;padding-top:8px}
+.feature-info h3{font-size:1.3rem}
+.feature-info p{color:var(--ink-2)}
+@media (max-width:700px){.feature{grid-template-columns:1fr 1fr}.feature .main{grid-column:1/-1;grid-row:auto}}
+
+/* services: two pillars */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pillar{background:var(--paper);border-radius:var(--r);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:20px;min-width:0}
+.pillar .ico{width:56px;height:56px;color:var(--rose)}
+.pillar h3{font-size:1.35rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.pillar > p{color:var(--ink-2)}
+.pillar ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.pillar li{padding:12px 0;border-bottom:1px solid var(--line)}
+.pillar li b{font-weight:500}
+.pillar li span{display:block;font-size:.92rem;color:var(--ink-2)}
+.gap-note{margin-top:auto;background:var(--paper-2);border-radius:12px;padding:18px 20px}
+.gap-note h4{margin:0 0 4px;font-family:var(--f-display);font-size:.95rem;font-weight:600}
+.gap-note p{font-size:.95rem;color:var(--ink-2)}
+@media (max-width:820px){.pillars{grid-template-columns:1fr}}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.step{border-top:1px solid var(--rose);padding-top:18px;min-width:0}
+.step .n{font-family:var(--f-display);font-size:.78rem;font-weight:600;letter-spacing:.14em;color:var(--rose-dk)}
+.step h3{margin-top:10px}
+.step p{margin-top:8px;color:var(--ink-2);font-size:.95rem}
+@media (max-width:940px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.steps{grid-template-columns:1fr}}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.why div{min-width:0}
+.why p{margin-top:8px;color:var(--ink-2);font-size:.95rem}
+@media (max-width:940px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.why{grid-template-columns:1fr}}
+
+/* recent work */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.proj{display:flex;flex-direction:column;gap:12px;min-width:0}
+.ph{aspect-ratio:4/3;width:100%;max-width:100%;border-radius:var(--r);background:var(--paper-2);border:1px dashed var(--line);display:grid;place-items:center;color:var(--rose-dk);font-family:var(--f-display);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase}
+.proj .meta{font-size:.9rem;color:var(--ink-2)}
+@media (max-width:860px){.gallery{grid-template-columns:1fr}}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.quote{margin:0;padding:28px;background:var(--paper);border-radius:var(--r);display:flex;flex-direction:column;gap:18px;min-width:0}
+.quote blockquote{margin:0;font-size:1.05rem;line-height:1.55}
+.quote figcaption{margin-top:auto;font-size:.88rem;color:var(--ink-2)}
+.quote figcaption b{display:block;color:var(--ink);font-weight:500}
+.sample{font-family:var(--f-display);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-dk);border:1px dashed var(--rose);border-radius:999px;padding:3px 9px;align-self:flex-start}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+
+/* quote form */
+.quote-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,72px)}
+.contact-list{list-style:none;padding:0;margin:32px 0 0;border-top:1px solid var(--line)}
+.contact-list li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.contact-list .k{font-family:var(--f-display);font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-dk)}
+.contact-list a,.contact-list span.v{text-decoration:none;overflow-wrap:anywhere}
+.contact-list a:hover{color:var(--rose-dk)}
+form.rfq{background:#fff;border-radius:24px;padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;border:1px solid var(--line)}
+.field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:.85rem;font-weight:500}
+.field label .opt{font-weight:400;color:var(--ink-2)}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.75em .95em;width:100%}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--rose-dk);box-shadow:0 0 0 3px rgba(212,154,156,.3)}
+.field [aria-invalid="true"]{border-color:#a3473f}
+.err{font-size:.8rem;color:#a3473f}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:6px}
+.form-foot small{color:var(--ink-2);font-size:.82rem}
+.done{grid-column:1/-1;border-radius:var(--r);background:var(--paper-2);padding:22px}
+.done h3{margin-bottom:8px}
+.done pre{white-space:pre-wrap;font-family:var(--f-body);font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0;max-height:240px;overflow:auto}
+.done .row{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.quote-grid{grid-template-columns:1fr}}
+@media (max-width:560px){form.rfq{grid-template-columns:1fr}}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:32px 36px;font-size:.88rem;color:var(--ink-2)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+/* mobile action bar */
+.mbar{display:none}
+@media (max-width:720px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--paper);gap:10px;border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .mbar a{display:flex;justify-content:center;padding:.8em;border-radius:999px;font-family:var(--f-display);font-weight:600;font-size:.88rem;text-decoration:none}
+  .mbar .call{border:1px solid var(--ink)}
+  .mbar .q{background:var(--ink);color:var(--paper)}
+  footer{padding-bottom:110px}
+}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 64 44"><path fill="none" stroke="currentColor" stroke-width="2.6" d="M1 42h9V10L25 2v40M17 42V24l3-2 7 5v15M27 42V27M24 42V16l9-5 4 2v29M31 42V18l12 7v17h8"/></symbol>
+  <symbol id="crane" viewBox="0 0 56 56"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M8 10h40M8 10v5h40v-5M40 4v48M36 52h12M40 15l-4 5h8z"/><path d="M14 15v6M10 21h8v5h-8zM5 32h22v6H5zM5 38h22v6H5zM5 44h22v6H5zM16 32v6M11 38v6M21 38v6M16 44v6"/></g></symbol>
+  <symbol id="tower" viewBox="0 0 56 56"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M2 52h52M10 52V26l10-6v32M20 52V12l10-6 10 6v40M40 52V24l8 5v23M26 52V18M34 52V18"/></g></symbol>
+</svg>
+
+<a class="vh" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Superclean Sydney, home">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span><b>Super Clean</b><small>Sydney</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#work">Recent work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+61419511511">+61 419 511 511</a>
+      <a class="btn btn-primary" href="#quote">Request a Quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">Superclean Sydney</span>
+        <h1>Construction and commercial cleaning <span>across Sydney.</span></h1>
+        <p class="lede">From builders' cleans to handover, and ongoing cleaning once your tenants move in. Reliable crews, clear communication and a finish you can sign off on.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#quote">Request a Quote</a>
+          <a class="btn btn-ghost" href="#quote" data-type="Site inspection">Book a site inspection</a>
+        </div>
+        <div class="stat"><b>1,000+</b><span>units handed over across Sydney</span></div>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/mason-main-314.jpg" alt="Finished apartment kitchen and dining area at Mason &amp; Main, Merrylands" width="1600" height="1067">
+        <figcaption>Mason &amp; Main, Merrylands · Photo: Tom Roe Photography</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="services" class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Services</span>
+        <h2>Two services, one team.</h2>
+        <p class="lede">Every job is scoped to your site. Tell us what needs doing and we'll build the plan around it.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <svg class="ico" aria-hidden="true"><use href="#crane"/></svg>
+          <h3>Construction cleaning</h3>
+          <p>For builders, developers and project managers, from the first clean on site through to handover.</p>
+          <ul>
+            <li><b>Builders' cleans</b><span>Debris, dust and packaging cleared between trade stages.</span></li>
+            <li><b>Final cleans</b><span>Top-to-bottom clean at practical completion.</span></li>
+            <li><b>Post-construction detailing</b><span>Paint, adhesive, silicone and protective film removed.</span></li>
+            <li><b>Glass, windows &amp; high-level dusting</b><span>Glazing, frames, tracks, bulkheads and services.</span></li>
+            <li><b>Pre-handover presentation cleans</b><span>A final touch-up before inspection or opening.</span></li>
+          </ul>
+          <div class="gap-note">
+            <h4>Gaps in the scope? We'll take care of them.</h4>
+            <p>Removing floor protection, moving loose furniture, re-cleans after defects, urgent call-outs. If it falls between trade packages, hand it to us.</p>
+          </div>
+        </article>
+        <article class="pillar">
+          <svg class="ico" aria-hidden="true"><use href="#tower"/></svg>
+          <h3>Commercial cleaning</h3>
+          <p>For property managers and businesses that need their spaces kept to a consistent standard.</p>
+          <ul>
+            <li><b>Offices &amp; workplaces</b><span>Daily, weekly or after-hours cleaning.</span></li>
+            <li><b>Retail &amp; hospitality</b><span>Front-of-house and back-of-house, scheduled around trading.</span></li>
+            <li><b>Strata &amp; common areas</b><span>Lobbies, lifts, stairwells, car parks and bin rooms.</span></li>
+            <li><b>Medical &amp; education</b><span>Clinics, schools and shared facilities.</span></li>
+            <li><b>Floors, windows &amp; pressure washing</b><span>Periodic deep cleans on top of regular service.</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">How it works</span>
+        <h2>A clear process from first call to sign-off.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step"><span class="n">01</span><h3>Site review</h3><p>We visit the site to see the space, finishes and access.</p></li>
+        <li class="step"><span class="n">02</span><h3>Scope &amp; schedule</h3><p>You get a written scope and dates that fit your program.</p></li>
+        <li class="step"><span class="n">03</span><h3>Cleaning</h3><p>Our team works through the site, coordinating with yours.</p></li>
+        <li class="step"><span class="n">04</span><h3>Quality check</h3><p>A supervisor checks every area against the scope.</p></li>
+        <li class="step"><span class="n">05</span><h3>Handover</h3><p>We walk the space with you and close out any items.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Why Superclean</span>
+        <h2>Dependable from start to finish.</h2>
+      </div>
+      <div class="why">
+        <div><h3>Proven at scale</h3><p>More than 1,000 units handed over, from single fit-outs to large apartment buildings.</p></div>
+        <div><h3>Reliable scheduling</h3><p>We commit to dates we can staff and tell you early if anything changes.</p></div>
+        <div><h3>Attention to detail</h3><p>Area-by-area checklists covering tracks, sills, grilles and joinery.</p></div>
+        <div><h3>One point of contact</h3><p>Clear updates by level or zone, with photos on request.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Recent work</span>
+        <h2>Recent projects.</h2>
+      </div>
+      <figure class="feature">
+        <div class="main"><img src="img/mason-main-287.jpg" alt="Living room opening onto a balcony at Mason &amp; Main" width="1600" height="1067" loading="lazy"></div>
+        <div class="thumb"><img src="img/mason-main-493.jpg" alt="One-bedroom apartment at Mason &amp; Main" width="1600" height="1067" loading="lazy"></div>
+        <div class="thumb"><img src="img/mason-main-369.jpg" alt="Three-bedroom apartment at Mason &amp; Main" width="1600" height="1070" loading="lazy"></div>
+        <div class="feature-info">
+          <div><h3>Mason &amp; Main by Nation</h3><p>Apartments · Construction cleaning · Merrylands, NSW</p></div>
+          <figcaption>Photos: Tom Roe Photography, courtesy of Nation</figcaption>
+        </div>
+      </figure>
+      <div class="gallery" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <article class="proj"><div class="ph">Project photo</div><h3>Office fit-out</h3><p class="meta">Construction final clean · [Suburb], NSW</p></article>
+        <article class="proj"><div class="ph">Project photo</div><h3>Medical centre</h3><p class="meta">Ongoing commercial cleaning · [Suburb], NSW</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Testimonials</span>
+        <h2>What our clients say.</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote"><span class="sample">Sample — replace</span><blockquote>"They worked around our late trades and the floors were ready for the client walk on the day."</blockquote><figcaption><b>[Name]</b>Site Manager, [Builder]</figcaption></figure>
+        <figure class="quote"><span class="sample">Sample — replace</span><blockquote>"Clear scope, clear schedule, and they picked up the jobs nobody else had priced."</blockquote><figcaption><b>[Name]</b>Project Manager, [Developer]</figcaption></figure>
+        <figure class="quote"><span class="sample">Sample — replace</span><blockquote>"Our building has looked consistently good since they took over the weekly clean."</blockquote><figcaption><b>[Name]</b>Property Manager, [Company]</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote">
+    <div class="wrap quote-grid" id="contact">
+      <div>
+        <span class="label">Request a quote</span>
+        <h2>Tell us about your job.</h2>
+        <p class="lede" style="margin-top:16px">Send us the details and we'll arrange a site inspection or come back with a quote.</p>
+        <ul class="contact-list">
+          <li><span class="k">Phone</span><a href="tel:+61419511511">+61 419 511 511</a></li>
+          <li><span class="k">Email</span><a href="mailto:contact@supercleansydney.com">contact@supercleansydney.com</a></li>
+          <li><span class="k">Web</span><span class="v">www.supercleansydney.com</span></li>
+          <li><span class="k">Area</span><span class="v">Sydney and surrounds</span></li>
+        </ul>
+      </div>
+
+      <form class="rfq" id="rfq" novalidate>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="Name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+        <div class="field"><label for="f-company">Company</label><input id="f-company" name="Company" autocomplete="organization" required><span class="err" id="e-company"></span></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel" required><span class="err" id="e-phone"></span></div>
+        <div class="field full"><label for="f-address">Site address</label><input id="f-address" name="Site address" autocomplete="street-address" required><span class="err" id="e-address"></span></div>
+        <div class="field"><label for="f-type">Type of work</label>
+          <select id="f-type" name="Type of work" required>
+            <option value="">Select one</option>
+            <option>Construction cleaning</option><option>Commercial cleaning (ongoing)</option><option>Commercial cleaning (one-off)</option><option>Scope gap / other job</option><option>Site inspection</option>
+          </select><span class="err" id="e-type"></span></div>
+        <div class="field"><label for="f-size">Approximate size <span class="opt">(m², levels or units)</span></label><input id="f-size" name="Approximate size" placeholder="e.g. 120 units over 8 levels"></div>
+        <div class="field full"><label for="f-date">Date required <span class="opt">(optional)</span></label><input id="f-date" name="Date required" type="date"></div>
+        <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="Message" placeholder="What needs doing, access, after-hours requirements…"></textarea></div>
+        <div class="form-foot">
+          <small>We reply within one business day.</small>
+          <button class="btn btn-primary" type="submit">Request a Quote</button>
+        </div>
+        <div class="done" id="done" hidden aria-live="polite">
+          <h3>Your request is ready to send</h3>
+          <p>Email these details to <b>contact@supercleansydney.com</b> or call <b>+61 419 511 511</b>.</p>
+          <pre id="summary"></pre>
+          <div class="row"><button type="button" class="btn btn-primary" id="copy">Copy details</button><button type="button" class="btn btn-ghost" id="edit">Edit request</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© Superclean Sydney Pty Ltd</span>
+    <span><a href="tel:+61419511511">+61 419 511 511</a> · <a href="mailto:contact@supercleansydney.com">contact@supercleansydney.com</a></span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="call" href="tel:+61419511511">Call</a>
+  <a class="q" href="#quote">Request a Quote</a>
+</nav>
+
+<script>
+(function(){
+  var form=document.getElementById('rfq'), done=document.getElementById('done'), summary=document.getElementById('summary');
+  var typeSel=document.getElementById('f-type');
+  document.querySelectorAll('[data-type]').forEach(function(a){
+    a.addEventListener('click',function(){typeSel.value=a.getAttribute('data-type');});
+  });
+  var checks=[['f-name','e-name','Enter your name.'],['f-company','e-company','Enter your company name.'],['f-email','e-email','Enter a valid email address.'],['f-phone','e-phone','Enter a phone number.'],['f-address','e-address','Enter the site address.'],['f-type','e-type','Choose the type of work.']];
+  function validate(){
+    var first=null;
+    checks.forEach(function(c){
+      var el=document.getElementById(c[0]), er=document.getElementById(c[1]);
+      var bad=!el.value.trim()||(el.type==='email'&&!/^\S+@\S+\.\S+$/.test(el.value));
+      el.setAttribute('aria-invalid',bad?'true':'false');
+      er.textContent=bad?c[2]:'';
+      if(bad){el.setAttribute('aria-describedby',c[1]);if(!first)first=el;}
+    });
+    if(first)first.focus();
+    return !first;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!validate())return;
+    var lines=[];
+    Array.prototype.forEach.call(form.elements,function(el){
+      if(el.name&&el.value.trim())lines.push(el.name+': '+el.value.trim());
+    });
+    summary.textContent='Quote request\n\n'+lines.join('\n');
+    done.hidden=false;
+    done.scrollIntoView({block:'nearest'});
+  });
+  document.getElementById('edit').addEventListener('click',function(){done.hidden=true;document.getElementById('f-name').focus();});
+  document.getElementById('copy').addEventListener('click',function(){
+    var btn=this;
+    function sel(){var r=document.createRange();r.selectNodeContents(summary);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl/Cmd+C';}
+    try{navigator.clipboard.writeText(summary.textContent).then(function(){btn.textContent='Copied';},sel);}catch(err){sel();}
+  });
+})();
+</script>
+</body>
+</html>
